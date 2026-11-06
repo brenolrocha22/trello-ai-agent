@@ -1,0 +1,19 @@
+# Credenciais
+.env
+.env.*
+!.env.exemplo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# ADK (sessões locais)
+.adk/
+
+# Editor / ferramentas locais
+.vscode/
+.idea/
+.snapshots/
