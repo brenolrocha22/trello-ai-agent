@@ -1,5 +1,7 @@
 # Agente de Tarefas com Trello (Google ADK + Gemini)
 
+## 1. Apresentação e objetivo
+
 Agente conversacional que organiza as tarefas do dia diretamente em um quadro do Trello. Você conta o que precisa fazer, e ele cria os cards, informa o andamento e move ou exclui tarefas conforme você relata o progresso.
 
 O projeto parte do exemplo educacional da DIO ([`agents/agent04`](https://github.com/digitalinnovationone/agent-carbon-footprint/tree/main/agents/agent04)) e corrige os problemas que encontrei nele (veja [Melhorias implementadas](#9-melhorias-implementadas)).
