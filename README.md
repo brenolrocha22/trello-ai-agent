@@ -69,7 +69,10 @@ Todas as ferramentas retornam `{"resultado": "sucesso" | "erro", "mensagem": ...
 
 O modelo padrão é `gemini-3.8-flash`. O `gemini-2.5-flash`, usado no projeto original, retorna *404 "no longer available to new users"* para chaves novas. Para usar outro modelo, defina `GEMINI_MODEL` no `.env` (ex.: `gemini-3.5-flash`).
 
-Se o agente responder com erro **503 UNAVAILABLE** ("high demand"), o modelo está temporariamente sobrecarregado no Google. Espere alguns minutos ou troque o `GEMINI_MODEL`.
+Erros comuns do Gemini no plano gratuito:
+
+- **503 UNAVAILABLE ("high demand"):** sobrecarga temporária do modelo. O agente já tenta de novo sozinho. Se persistir, espere alguns minutos ou troque o `GEMINI_MODEL`.
+- **429 RESOURCE_EXHAUSTED ("requests per day"):** acabou a cota diária gratuita (cerca de 20 requisições por dia, **por modelo**). Esperar alguns segundos não resolve. Troque o `GEMINI_MODEL` (ex.: `gemini-3.5-flash-lite`, que tem cota própria) ou espere a cota renovar no dia seguinte. Cada mensagem pode gastar 2 ou mais requisições, porque cada chamada de ferramenta é uma ida ao modelo.
 
 ## 6. Configuração do Trello
 
@@ -212,7 +215,7 @@ Na mensagem seguinte, o Gemini respondeu **503 "high demand"**, uma sobrecarga t
 
 ![Agente movendo a tarefa entre listas no adk web](docs/img/adk-web-mudar-status.png)
 
-**Quadro do Trello depois da conversa.** Os cards foram criados pelo agente, com as datas certas (06/11 e 07/11), e o README já foi movido para Concluído:
+**Quadro do Trello depois das conversas.** Os cards foram criados e movidos pelo agente: um em cada lista, com as datas certas (06/11 e 07/11):
 
 ![Quadro do Trello atualizado pelo agente](docs/img/trello-board.png)
 
