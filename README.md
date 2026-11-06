@@ -212,6 +212,10 @@ Na mensagem seguinte, o Gemini respondeu **503 "high demand"**, uma sobrecarga t
 
 ![Agente movendo a tarefa entre listas no adk web](docs/img/adk-web-mudar-status.png)
 
+**Quadro do Trello depois da conversa.** Os cards foram criados pelo agente, com as datas certas (06/11 e 07/11), e o README já foi movido para Concluído:
+
+![Quadro do Trello atualizado pelo agente](docs/img/trello-board.png)
+
 ---
 
 Projeto educacional baseado no bootcamp da [DIO](https://www.dio.me/).
